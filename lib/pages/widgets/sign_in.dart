@@ -1,4 +1,3 @@
-import 'package:authpasseport/theme.dart';
 import 'package:authpasseport/widgets/snackbar.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -126,20 +125,20 @@ class _SignInState extends State<SignIn> {
                   borderRadius: BorderRadius.all(Radius.circular(5.0)),
                   boxShadow: <BoxShadow>[
                     BoxShadow(
-                      color: CustomTheme.loginGradientStart,
+                      color: Color.fromARGB(255, 209, 217, 241),
                       offset: Offset(1.0, 6.0),
                       blurRadius: 20.0,
                     ),
                     BoxShadow(
-                      color: CustomTheme.loginGradientEnd,
+                      color: Color.fromARGB(255, 59, 59, 114),
                       offset: Offset(1.0, 6.0),
                       blurRadius: 20.0,
                     ),
                   ],
                   gradient: LinearGradient(
                       colors: <Color>[
-                        CustomTheme.loginGradientEnd,
-                        CustomTheme.loginGradientStart
+                        Color.fromARGB(255, 79, 163, 231),
+                        Color.fromARGB(255, 76, 99, 201),
                       ],
                       begin: FractionalOffset(0.2, 0.2),
                       end: FractionalOffset(1.0, 1.0),
@@ -148,7 +147,7 @@ class _SignInState extends State<SignIn> {
                 ),
                 child: MaterialButton(
                   highlightColor: Colors.transparent,
-                  splashColor: CustomTheme.loginGradientEnd,
+                  splashColor: const Color.fromARGB(255, 83, 65, 247),
                   child: const Padding(
                     padding:
                         EdgeInsets.symmetric(vertical: 10.0, horizontal: 42.0),
@@ -167,108 +166,108 @@ class _SignInState extends State<SignIn> {
               )
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 10.0),
-            child: TextButton(
-                onPressed: () {},
-                child: const Text(
-                  'Forgot Password?',
-                  style: TextStyle(
-                      decoration: TextDecoration.underline,
-                      color: Colors.white,
-                      fontSize: 16.0,
-                      fontFamily: 'WorkSansMedium'),
-                )),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 10.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                        colors: <Color>[
-                          Colors.white10,
-                          Colors.white,
-                        ],
-                        begin: FractionalOffset(0.0, 0.0),
-                        end: FractionalOffset(1.0, 1.0),
-                        stops: <double>[0.0, 1.0],
-                        tileMode: TileMode.clamp),
-                  ),
-                  width: 100.0,
-                  height: 1.0,
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 15.0, right: 15.0),
-                  child: Text(
-                    'Or',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16.0,
-                        fontFamily: 'WorkSansMedium'),
-                  ),
-                ),
-                Container(
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                        colors: <Color>[
-                          Colors.white,
-                          Colors.white10,
-                        ],
-                        begin: FractionalOffset(0.0, 0.0),
-                        end: FractionalOffset(1.0, 1.0),
-                        stops: <double>[0.0, 1.0],
-                        tileMode: TileMode.clamp),
-                  ),
-                  width: 100.0,
-                  height: 1.0,
-                ),
-              ],
-            ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(top: 10.0, right: 40.0),
-                child: GestureDetector(
-                  onTap: () => CustomSnackBar(
-                      context, const Text('Facebook button pressed')),
-                  child: Container(
-                    padding: const EdgeInsets.all(15.0),
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.white,
-                    ),
-                    child: const Icon(
-                      FontAwesomeIcons.facebookF,
-                      color: Color(0xFF0084ff),
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 10.0),
-                child: GestureDetector(
-                  onTap: () => CustomSnackBar(
-                      context, const Text('Google button pressed')),
-                  child: Container(
-                    padding: const EdgeInsets.all(15.0),
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.white,
-                    ),
-                    child: const Icon(
-                      FontAwesomeIcons.google,
-                      color: Color(0xFF0084ff),
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.only(top: 10.0),
+          //   child: TextButton(
+          //       onPressed: () {},
+          //       child: const Text(
+          //         'Forgot Password?',
+          //         style: TextStyle(
+          //             decoration: TextDecoration.underline,
+          //             color: Colors.white,
+          //             fontSize: 16.0,
+          //             fontFamily: 'WorkSansMedium'),
+          //       )),
+          // ),
+          // Padding(
+          //   padding: const EdgeInsets.only(top: 10.0),
+          //   child: Row(
+          //     mainAxisAlignment: MainAxisAlignment.center,
+          //     children: <Widget>[
+          //       Container(
+          //         decoration: const BoxDecoration(
+          //           gradient: LinearGradient(
+          //               colors: <Color>[
+          //                 Colors.white10,
+          //                 Colors.white,
+          //               ],
+          //               begin: FractionalOffset(0.0, 0.0),
+          //               end: FractionalOffset(1.0, 1.0),
+          //               stops: <double>[0.0, 1.0],
+          //               tileMode: TileMode.clamp),
+          //         ),
+          //         width: 100.0,
+          //         height: 1.0,
+          //       ),
+          //       const Padding(
+          //         padding: EdgeInsets.only(left: 15.0, right: 15.0),
+          //         child: Text(
+          //           'Or',
+          //           style: TextStyle(
+          //               color: Colors.white,
+          //               fontSize: 16.0,
+          //               fontFamily: 'WorkSansMedium'),
+          //         ),
+          //       ),
+          //       Container(
+          //         decoration: const BoxDecoration(
+          //           gradient: LinearGradient(
+          //               colors: <Color>[
+          //                 Colors.white,
+          //                 Colors.white10,
+          //               ],
+          //               begin: FractionalOffset(0.0, 0.0),
+          //               end: FractionalOffset(1.0, 1.0),
+          //               stops: <double>[0.0, 1.0],
+          //               tileMode: TileMode.clamp),
+          //         ),
+          //         width: 100.0,
+          //         height: 1.0,
+          //       ),
+          //     ],
+          //   ),
+          // ),
+          // Row(
+          //   mainAxisAlignment: MainAxisAlignment.center,
+          //   children: <Widget>[
+          //     Padding(
+          //       padding: const EdgeInsets.only(top: 10.0, right: 40.0),
+          //       child: GestureDetector(
+          //         onTap: () => CustomSnackBar(
+          //             context, const Text('Facebook button pressed')),
+          //         child: Container(
+          //           padding: const EdgeInsets.all(15.0),
+          //           decoration: const BoxDecoration(
+          //             shape: BoxShape.circle,
+          //             color: Colors.white,
+          //           ),
+          //           child: const Icon(
+          //             FontAwesomeIcons.facebookF,
+          //             color: Color(0xFF0084ff),
+          //           ),
+          //         ),
+          //       ),
+          //     ),
+          //     Padding(
+          //       padding: const EdgeInsets.only(top: 10.0),
+          //       child: GestureDetector(
+          //         onTap: () => CustomSnackBar(
+          //             context, const Text('Google button pressed')),
+          //         child: Container(
+          //           padding: const EdgeInsets.all(15.0),
+          //           decoration: const BoxDecoration(
+          //             shape: BoxShape.circle,
+          //             color: Colors.white,
+          //           ),
+          //           child: const Icon(
+          //             FontAwesomeIcons.google,
+          //             color: Color(0xFF0084ff),
+          //           ),
+          //         ),
+          //       ),
+          //     ),
+          //   ],
+          // ),
         ],
       ),
     );

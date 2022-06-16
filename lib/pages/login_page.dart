@@ -1,6 +1,5 @@
 import 'package:authpasseport/pages/widgets/sign_in.dart';
 import 'package:authpasseport/pages/widgets/sign_up.dart';
-import 'package:authpasseport/theme.dart';
 import 'package:authpasseport/utils/bubble_indicator_painter.dart';
 import 'package:flutter/material.dart';
 
@@ -45,8 +44,8 @@ class _LoginPageState extends State<LoginPage>
           decoration: const BoxDecoration(
             gradient: LinearGradient(
                 colors: <Color>[
-                  CustomTheme.loginGradientStart,
-                  CustomTheme.loginGradientEnd
+                  Color.fromARGB(255, 255, 255, 255),
+                  Color.fromARGB(255, 249, 250, 252),
                 ],
                 begin: FractionalOffset(0.0, 0.0),
                 end: FractionalOffset(1.0, 1.0),
@@ -122,11 +121,12 @@ class _LoginPageState extends State<LoginPage>
             Expanded(
               child: TextButton(
                 style: ButtonStyle(
-                  overlayColor: MaterialStateProperty.all(Colors.transparent),
+                  overlayColor: MaterialStateProperty.all(
+                      const Color.fromARGB(0, 148, 48, 48)),
                 ),
                 onPressed: _onSignInButtonPress,
                 child: Text(
-                  'Existing',
+                  'Sign In',
                   style: TextStyle(
                       color: left,
                       fontSize: 16.0,
@@ -142,7 +142,7 @@ class _LoginPageState extends State<LoginPage>
                 ),
                 onPressed: _onSignUpButtonPress,
                 child: Text(
-                  'New',
+                  'Sign Up',
                   style: TextStyle(
                       color: right,
                       fontSize: 16.0,
