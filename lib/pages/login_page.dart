@@ -45,7 +45,7 @@ class _LoginPageState extends State<LoginPage>
             gradient: LinearGradient(
                 colors: <Color>[
                   Color.fromARGB(255, 255, 255, 255),
-                  Color.fromARGB(255, 249, 250, 252),
+                  Color.fromARGB(255, 154, 183, 241),
                 ],
                 begin: FractionalOffset(0.0, 0.0),
                 end: FractionalOffset(1.0, 1.0),

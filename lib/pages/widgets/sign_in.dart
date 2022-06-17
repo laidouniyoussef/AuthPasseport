@@ -1,3 +1,4 @@
+import 'package:authpasseport/pages/form_page.dart';
 import 'package:authpasseport/widgets/snackbar.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -42,12 +43,12 @@ class _SignInState extends State<SignIn> {
                 ),
                 child: SizedBox(
                   width: 300.0,
-                  height: 190.0,
+                  height: 140.0,
                   child: Column(
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.only(
-                            top: 20.0, bottom: 20.0, left: 25.0, right: 25.0),
+                            top: 7.0, bottom: 7.0, left: 25.0, right: 25.0),
                         child: TextField(
                           focusNode: focusNodeEmail,
                           controller: loginEmailController,
@@ -65,7 +66,7 @@ class _SignInState extends State<SignIn> {
                             ),
                             hintText: 'Email Address',
                             hintStyle: TextStyle(
-                                fontFamily: 'WorkSansSemiBold', fontSize: 17.0),
+                                fontFamily: 'WorkSansSemiBold', fontSize: 16.0),
                           ),
                           onSubmitted: (_) {
                             focusNodePassword.requestFocus();
@@ -79,7 +80,7 @@ class _SignInState extends State<SignIn> {
                       ),
                       Padding(
                         padding: const EdgeInsets.only(
-                            top: 20.0, bottom: 20.0, left: 25.0, right: 25.0),
+                            top: 7.0, bottom: 7.0, left: 25.0, right: 25.0),
                         child: TextField(
                           focusNode: focusNodePassword,
                           controller: loginPasswordController,
@@ -97,7 +98,7 @@ class _SignInState extends State<SignIn> {
                             ),
                             hintText: 'Password',
                             hintStyle: const TextStyle(
-                                fontFamily: 'WorkSansSemiBold', fontSize: 17.0),
+                                fontFamily: 'WorkSansSemiBold', fontSize: 16.0),
                             suffixIcon: GestureDetector(
                               onTap: _toggleLogin,
                               child: Icon(
@@ -120,7 +121,7 @@ class _SignInState extends State<SignIn> {
                 ),
               ),
               Container(
-                margin: const EdgeInsets.only(top: 170.0),
+                margin: const EdgeInsets.only(top: 120.0),
                 decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(5.0)),
                   boxShadow: <BoxShadow>[
@@ -155,13 +156,16 @@ class _SignInState extends State<SignIn> {
                       'LOGIN',
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 25.0,
+                          fontSize: 16.0,
                           fontFamily: 'WorkSansBold'),
                     ),
                   ),
-                  onPressed: () => CustomSnackBar(
-                      context, const Text('Login button pressed'),
-                      snackBarAction: null),
+                  onPressed: () => {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const FormPage()))
+                  },
                 ),
               )
             ],
